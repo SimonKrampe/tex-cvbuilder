@@ -205,7 +205,7 @@
 
 % Environment for listing out projects
 \newenvironment{projitem}[2]{%
-    {\color{bodytext}{\ifthenelse{\isempty{#2}}{\sitemtit{#1}}{\sitemtit{#1 | #2}}}}\par
+    {\color{bodytext}{\ifthenelse{\isempty{#2}}{{#1}}{{#1 | #2}}}}\par
     \begin{quote}
 }{\end{quote}}
 
