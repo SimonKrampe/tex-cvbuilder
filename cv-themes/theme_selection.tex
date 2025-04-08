@@ -201,13 +201,13 @@
     {\color{bodytext}{{#4, #3}}}\\
     {\sitemsub{#1 | #2}}\par
     \begin{quote}
-}{\end{quote}}
+}{\end{quote}\vspace{0.5em}}
 
 % Environment for listing out projects
 \newenvironment{projitem}[2]{%
     {\color{bodytext}{\ifthenelse{\isempty{#2}}{{#1}}{{#1 | #2}}}}\par
     \begin{quote}
-}{\end{quote}}
+}{\end{quote}\vspace{0.5em}}
 
 % Bullet style and spacing
 \setlist[itemize,1]{label={\color{bulletcolor}$\bullet$},parsep=6pt,labelindent=12pt}
