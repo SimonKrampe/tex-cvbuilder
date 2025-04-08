@@ -60,23 +60,24 @@
 \columncolor{sidebartext}[0]
 \columncolor{bodytext}[1]
 
-\newcommand{\makeprofile}{%
+\newcommand{\makeprofile}{
     \vspace*{-1.5cm}
-    \begin{center}
-        \thispagestyle{firstpagestyle}
-        {\setstretch{3}
-        \begin{adjustbox}{minipage=[c][2.5cm]{.9\textwidth}}
-            \centering
-            {\sname\name}
-        \end{adjustbox}}
+    {\setstretch{3}
+    \begin{adjustbox}{padding=6.55cm 0pt 0pt 0pt,minipage=[c][2.5cm]{12cm}}
+        {\sname\name}
+    \end{adjustbox}}
 
-        {\setstretch{1.8}
-        \begin{adjustbox}{minipage=[c][1.5cm]{.9\textwidth}}
-            \centering
-            {\sjobtitle\jobtitle}
-        \end{adjustbox}}
-    \end{center}
+    {\setstretch{1.8}
+    \begin{adjustbox}{padding=6.55cm 0pt 0pt 0pt,minipage=[c][1.5cm]{12cm}}
+        {\sjobtitle\jobtitle}
+    \end{adjustbox}}
     \bigskip
+    \ifthenelse{\equal{\profilepic}{}}{}{
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[circle,minimum width=4cm, path picture={
+                \node at (path picture bounding box.center){\includegraphics[width=4cm]{\profilepic}};}] at ($(current page.north west)+(3.5cm,-3cm)$) {};
+        \end{tikzpicture}
+    }
 }
 
 % Margins
