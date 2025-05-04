@@ -72,7 +72,14 @@
 
     {\setstretch{1.8}
     \begin{adjustbox}{padding=6.55cm 0pt 0pt 0pt,minipage=[c][1.5cm]{12cm}}
-        {\sjobtitle\jobtitle}
+        \begin{minipage}[t]{\linewidth}
+            \hspace{2em}
+            {\sjobtitle\jobtitle} \\
+            \begin{minipage}[t]{\linewidth}
+                \hspace{2em}
+                {\sjobsubtitle\jobsubtitle}
+            \end{minipage}
+        \end{minipage}
     \end{adjustbox}}
     \bigskip
     \ifthenelse{\equal{\profilepic}{}}{}{
